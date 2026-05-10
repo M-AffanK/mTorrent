@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mtorrent_client/utils/app_fonts.dart';
+import 'package:mtorrent/utils/app_fonts.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
