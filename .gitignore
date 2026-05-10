@@ -1,0 +1,60 @@
+# ---------------- Flutter / Dart ----------------
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Generated files
+**/doc/api/
+
+# ---------------- IDE ----------------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# ---------------- Logs ----------------
+*.log
+
+# ---------------- OS ----------------
+.DS_Store
+Thumbs.db
+
+# ---------------- Android ----------------
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/local.properties
+
+# ---------------- iOS ----------------
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.podspec
+ios/Flutter/.last_build_id
+ios/Runner.xcworkspace/xcuserdata/
+
+# ---------------- Linux ----------------
+linux/flutter/ephemeral/
+
+# ---------------- Windows ----------------
+windows/flutter/ephemeral/
+
+# ---------------- macOS ----------------
+macos/Flutter/ephemeral/
+
+# ---------------- Build artifacts ----------------
+*.class
+*.swp
+*.swo
+
+# Obfuscation / symbols (if used)
+app.*.symbols
+app.*.map.json
