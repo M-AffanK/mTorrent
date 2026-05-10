@@ -1,4 +1,4 @@
-name: mtorrent_client
+name: mtorrent
 description: Simple Flutter client for mTorrent coordinator.
 publish_to: "none"
 version: 1.0.0+1
