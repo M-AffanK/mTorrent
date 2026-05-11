@@ -1,5 +1,5 @@
 name: mtorrent
-description: Simple Flutter client for mTorrent coordinator.
+description: Simple Flutter app for mTorrentAtlas.
 publish_to: "none"
 version: 1.0.0+1
 
@@ -12,6 +12,7 @@ dependencies:
   file_picker: ^10.2.0
   path_provider: ^2.1.4
   google_fonts: ^8.1.0
+  shared_preferences: ^2.3.5
 
 dev_dependencies:
   flutter_test:

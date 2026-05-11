@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mtorrent/utils/app_fonts.dart';
 
+import '../utils/app_fonts.dart';
+import '../services/storage_service.dart';
 import '../routes/app_routes.dart';
 import '../widgets/text_field.dart';
 
@@ -17,6 +18,23 @@ class _SetupPageState extends State<SetupPage> {
       TextEditingController();
   final TextEditingController _portController =
       TextEditingController();
+  final StorageService _storageService = StorageService();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadConfig();
+  }
+
+  Future<void> _loadConfig() async {
+    final config = await _storageService.getServerConfig();
+    if (config != null) {
+      setState(() {
+        _hostController.text = config['host'] ?? '';
+        _portController.text = (config['port'] ?? '').toString();
+      });
+    }
+  }
 
   @override
   void dispose() {
@@ -58,7 +76,7 @@ class _SetupPageState extends State<SetupPage> {
               width: double.infinity,
               height: 50,
               child: FilledButton(
-                onPressed: () {
+                onPressed: () async {
                   final String host = _hostController.text.trim();
                   final int port =
                       int.tryParse(_portController.text.trim()) ?? 9090;
@@ -68,6 +86,10 @@ class _SetupPageState extends State<SetupPage> {
                     );
                     return;
                   }
+
+                  await _storageService.saveServerConfig(host, port);
+
+                  if (!context.mounted) return;
 
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     AppRoutes.home,
