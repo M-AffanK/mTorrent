@@ -50,6 +50,17 @@ class _SplashPageState extends State<SplashPage> {
           ],
         ),
       ),
+      bottomNavigationBar: Container(
+        padding: EdgeInsets.only(
+          top: 8,
+          bottom: 35,
+        ),
+        child: Text(
+          'version 1.0',
+          style: AppFonts.splashFooter,
+          textAlign: TextAlign.center,
+        ),
+      ),
     );
   }
 }
