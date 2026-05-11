@@ -20,6 +20,12 @@ class AppFonts {
     color: AppColors.primaryBlue,
   );
 
+  static const TextStyle splashFooter = TextStyle(
+    fontSize: 16,
+    color: AppColors.grey,
+    fontFamily: mainFamily,
+  );
+
   static const TextStyle connectedStatus = TextStyle(
     fontSize: 12,
     color: AppColors.grey,
